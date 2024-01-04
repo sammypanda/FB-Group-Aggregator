@@ -1,0 +1,16 @@
+{
+    "name": "sammy/fb-group-aggregator",
+    "description": "Aggregates the content from a list of FB/Meta groups",
+    "autoload": {
+        "psr-4": {
+            "Sammy\\FbGroupAggregator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sammypanda",
+            "email": "38725335+sammypanda@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
