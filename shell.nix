@@ -4,5 +4,6 @@ mkShell {
   buildInputs = [
     php83
     php83Packages.composer
+    insomnia
   ];
 }
