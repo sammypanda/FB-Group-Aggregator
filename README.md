@@ -8,3 +8,9 @@ Aggregates the content from a list of FB/Meta groups
 
 ## Other Notes
 [PHP FB Graph SDK](https://github.com/facebookarchive/php-graph-sdk) has been deprecated (PHP 5.x), so instead this project is using [Janu Software PHP Alternative FB Graph SDK](https://github.com/janu-software/facebook-php-sdk) (PHP 8.1).
+
+## ENV File
+```
+APP_ID=[ID]
+APP_SECRET=[SECRET]
+```

@@ -2,12 +2,12 @@
 
 namespace Sammy\FbGroupAggregator\Controller;
 
-use Sammy\FbGroupAggregator\Model\Group;
+use Sammy\FbGroupAggregator\Model\GroupModel;
 
 class GroupController {
 
     public function getGroupName() {
-        return Group::getGroupName();
+        return GroupModel::getGroupName();
     }
 
 }
