@@ -17,7 +17,8 @@ echo $groupController->getGroupName() . "<br>";
 
 try {
     // If you provided a 'default_access_token', the '{access-token}' is optional.
-    $response = $fb->get('/me', $access_token);
+    $group = $fb->get('/674918458180338', $access_token);
+    $group_feed = $fb->get('/674918458180338/feed', $access_token);
 } catch(\JanuSoftware\Facebook\Exception\ResponseException $e) {
     // When Graph returns an error
     echo 'Graph returned an error: ' . $e->getMessage();
@@ -28,8 +29,17 @@ try {
     exit;
 }
 
-$me = $response->getGraphNode();
-echo "<br>Logged in as " . $me->getField('name');
+$group = $group->getGraphNode();
+$group_feed = $group_feed->getGraphEdge();
+
+echo "<b><br>Test group name: <u>" . $group->getField('name');
+echo "</u></b><br>" . $group;
+
+echo "<br>";
+
+echo "<b><br>Test group post (array index 0): <u>" . $group_feed[0]->getField('message');
+echo "</u><br>Total posts found: " . $group_feed->getTotalCount();
+echo "</b><br>" . $group_feed;
 
 
 ?>
